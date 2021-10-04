@@ -1,2 +1,2 @@
-# vim-dotfiles
-My nvim dotfiles
+# VIM DOTFILES
+**My nvim dotfiles.**
