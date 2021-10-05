@@ -9,3 +9,8 @@ Files for windows and linux or some shit idk
 #
 ### Windows
 Edit lines **81** and **85** from `windows-terminal-settings.json`
+
+#
+### Screenshots
+![:^)](images/image2.png)
+![:^)](images/image1.png)
