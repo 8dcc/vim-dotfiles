@@ -4,7 +4,9 @@
 Files for windows and linux or some shit idk
 #
 ### Linux
-:^)
+Copy the `.vim` folder and the `.vimrc` to the user folder (`~`).
+
+Copy the `init.vim` file to `~/.config/nvim/init.vim`
 
 #
 ### Windows
