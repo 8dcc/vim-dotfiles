@@ -4,7 +4,11 @@ set termguicolors
 colors zenburn
 set number
 
-" STATUS LINE
+set tabstop=4
+set shiftwidth=4
+"set expandtab
+
+" ---------- STATUS LINE ----------
 
 set statusline=
 set statusline+=\ %F\ %M\ %Y\ %R
@@ -13,12 +17,12 @@ set statusline+=%=
 set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
 set laststatus=2
 
-" TAB FILE COMPLETION
+" ---------- TAB FILE COMPLETION ----------
 
 set wildmode=longest,list,full
 set wildmenu
 
-" FILENAMES (TABLINE)
+" --------- FILENAMES (TABLINE) ----------
 
 if has('gui')
   set guioptions-=e
