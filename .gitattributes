@@ -1,1 +1,1 @@
-.vim/plugged/vim-visual-multi/*.vim linguist-detectable=false
+*.vim linguist-detectable=false
