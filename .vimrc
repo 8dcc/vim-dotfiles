@@ -91,5 +91,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'Townk/vim-autoclose'
+Plug 'mg979/vim-visual-multi'
 
 call plug#end()
