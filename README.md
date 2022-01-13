@@ -1,5 +1,5 @@
 ## **VIM AND NVIM DOTFILES**
-**My nvim dotfiles.**
+**My vim/nvim dotfiles.**
 
 Files for windows and linux or some shit idk
 #
