@@ -1,7 +1,7 @@
 syntax on
 " set t_Co=256
 set termguicolors
-colors zenburn
+colors molokai
 set number
 
 set tabstop=4
