@@ -8,6 +8,11 @@ set tabstop=4
 set shiftwidth=4
 "set expandtab
 
+" ---------- TERMINAL MODE --------
+
+" For exiting terminal mode with esc only
+:tnoremap <Esc> <C-\><C-n>
+
 " ---------- STATUS LINE ----------
 
 set statusline=
@@ -17,7 +22,7 @@ set statusline+=%=
 set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
 set laststatus=2
 
-" ---------- TAB FILE COMPLETION ----------
+" ---------- TAB FILE COMPLETION ---------
 
 set wildmode=longest,list,full
 set wildmenu
