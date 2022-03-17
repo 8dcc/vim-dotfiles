@@ -8,6 +8,11 @@ set tabstop=4
 set shiftwidth=4
 "set expandtab
 
+" ---------- REMAPED KEYS --------
+
+nnoremap d "_d
+vnoremap d "_d
+
 " ---------- TERMINAL MODE --------
 
 " For exiting terminal mode with esc only
