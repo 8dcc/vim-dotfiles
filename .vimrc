@@ -2,11 +2,14 @@ syntax on
 " set t_Co=256
 set termguicolors
 colors molokai
+
 set number
+set mouse=a         " Enable mouse
 
 set tabstop=4
 set shiftwidth=4
-"set expandtab
+set expandtab       " This replaces tabs with spaces (in this case 4)
+
 
 " ---------- REMAPED KEYS --------
 
@@ -24,7 +27,8 @@ set statusline=
 set statusline+=\ %F\ %M\ %Y\ %R
 set statusline+=%=
 " set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
-set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
+" set statusline+=\ ascii:\ \%b\ \|\ row:\ %2l\ col:\ %2c\ percent:\ %3p%%
+set statusline+=\ \|\ ascii:\ \%3b\ \|\ row:\ %2l\ col:\ %2c\ \|\ %3p%%
 set laststatus=2
 
 " ---------- TAB FILE COMPLETION ---------
