@@ -2,6 +2,7 @@ syntax on
 " set t_Co=256
 set termguicolors
 colors molokai
+language en_US
 
 set number
 set mouse=a         " Enable mouse
@@ -106,5 +107,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Townk/vim-autoclose'
 Plug 'mg979/vim-visual-multi'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
