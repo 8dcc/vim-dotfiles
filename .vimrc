@@ -1,3 +1,6 @@
+" https://github.com/r4v10l1/vim-dotfiles
+" I swear to god if that zesty ass bitch tries to copy my shit I will go crazy
+
 syntax on
 " set t_Co=256
 set termguicolors
@@ -10,7 +13,6 @@ set mouse=a         " Enable mouse
 set tabstop=4
 set shiftwidth=4
 set expandtab       " This replaces tabs with spaces (in this case 4)
-
 
 " ---------- REMAPED KEYS --------
 
