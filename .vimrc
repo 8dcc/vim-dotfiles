@@ -5,7 +5,7 @@ syntax on
 " set t_Co=256
 set termguicolors
 colors molokai
-language en_US
+"language en_US
 
 set number
 set mouse=a         " Enable mouse
