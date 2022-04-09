@@ -1,4 +1,4 @@
-# VIM AND NVIM DOTFILES
+# Vim and nvim dotfiles
 **My vim/nvim dotfiles.**
 
 ## Installation
