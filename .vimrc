@@ -7,7 +7,12 @@ syntax on
 " set t_Co=256
 set termguicolors
 colors molokai
+<<<<<<< HEAD
 language en_US
+=======
+"language en_US
+
+>>>>>>> 2f4bed4edafdac26217cd57a516d1ea90d186ce2
 set number
 
 " ---------- TABS --------
@@ -36,11 +41,12 @@ vnoremap d "_d
 " ---------- STATUS LINE ----------
 
 set statusline=
-set statusline+=\ %F\ %M\ %Y\ %R
-set statusline+=%=
+set statusline+=\ %F\ %M\ %R
+set statusline+=%=									" From here justify to the right
 " set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
 " set statusline+=\ ascii:\ \%b\ \|\ row:\ %2l\ col:\ %2c\ percent:\ %3p%%
-set statusline+=\ \|\ ascii:\ \%3b\ \|\ row:\ %2l\ col:\ %2c\ \|\ %3p%%
+set statusline+=\ %Y\ \|\ ascii:\ \%3b\ \|\ row:\ %2l\ col:\ %2c\ \|\ %3p%%		" Moved the file file type to the righ
+
 set laststatus=2
 
 " ---------- TAB FILE COMPLETION ---------
