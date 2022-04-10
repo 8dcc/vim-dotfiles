@@ -3,17 +3,12 @@
 
 " ---------- COLORS AND STYLE --------
 
-syntax on
 " set t_Co=256
+syntax on
 set termguicolors
-colors molokai
-<<<<<<< HEAD
-language en_US
-=======
-"language en_US
-
->>>>>>> 2f4bed4edafdac26217cd57a516d1ea90d186ce2
 set number
+colors molokai
+"language en_US
 
 " ---------- TABS --------
 
