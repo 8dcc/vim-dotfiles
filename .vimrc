@@ -22,6 +22,7 @@ set mouse=a         " Enable mouse
 let &t_SI = "\e[6 q"                    " Line mode in insert mode
 let &t_EI = "\e[2 q"                    " Block mode in everything else
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it (nvim issue 6005)
+set guicursor=
 
 " ---------- REMAPED KEYS --------
 
