@@ -10,11 +10,14 @@ set number
 colors molokai
 "language en_US
 
-" ---------- TABS --------
+" ---------- TABS AND SPLITS ----------
 
 set tabstop=4
 set shiftwidth=4
 set expandtab       " This replaces tabs with spaces (in this case 4)
+
+set splitbelow
+set splitright
 
 " ---------- CURSORS --------
 
