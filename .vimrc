@@ -122,7 +122,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'Townk/vim-autoclose'
-Plug 'mg979/vim-visual-multi'
+"Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-commentary'
+Plug 'ollykel/v-vim'
 
 call plug#end()
