@@ -125,5 +125,6 @@ Plug 'Townk/vim-autoclose'
 "Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-commentary'
 Plug 'ollykel/v-vim'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
