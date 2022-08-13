@@ -10,7 +10,7 @@ set number
 colors molokai
 "language en_US
 
-set cursorline
+"set cursorline
 let g:indentLine_char = '│'
 
 " ---------- TABS AND SPLITS ----------
