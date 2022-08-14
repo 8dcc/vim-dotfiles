@@ -1,0 +1,3 @@
+[submodule ".vim/plugged/indent-blankline.nvim"]
+	path = .vim/plugged/indent-blankline.nvim
+	url = https://github.com/lukas-reineke/indent-blankline.nvim
