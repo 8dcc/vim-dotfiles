@@ -12,6 +12,7 @@ colors molokai
 
 "set cursorline
 let g:indentLine_char = '│'
+let g:indent_blankline_show_trailing_blankline_indent = v:false
 
 " ---------- TABS AND SPLITS ----------
 
@@ -136,6 +137,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-commentary'
 Plug 'ollykel/v-vim'
 Plug 'junegunn/goyo.vim'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 call plug#end()
