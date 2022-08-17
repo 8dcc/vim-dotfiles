@@ -4,15 +4,15 @@
 " ---------- COLORS AND STYLE --------
 
 " set t_Co=256
+"language en_US
 syntax on
 set termguicolors
-set number
+set number relativenumber
 colors molokai
-"language en_US
 
 "set cursorline
 let g:indentLine_char = '│'     " You might wanna use '¦' if there are spaces between lines
-let g:indent_blankline_show_trailing_blankline_indent = v:false
+let g:indent_blankline_show_trailing_blankline_indent = v:false     " See lukas-reineke/indent-blankline.nvim#469
 
 " ---------- TABS AND SPLITS ----------
 
@@ -20,7 +20,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab       " This replaces tabs with spaces (in this case 4)
 
-set splitbelow
+set splitbelow      " Make splits split to the right and below instead of up and left
 set splitright
 
 " ---------- FOLDING ----------
@@ -28,15 +28,15 @@ set splitright
 set foldmethod=syntax       " Syntax folding method
 set foldcolumn=0            " No column by default
 set foldlevel=999           " Start with everything unfolded
-set nofoldenable
+set nofoldenable            " Disable folding by default when opening a buffer
 
 " ---------- CURSORS --------
 
-set mouse=a         " Enable mouse
+set mouse=a                             " Enable mouse
 let &t_SI = "\e[6 q"                    " Line mode in insert mode
 let &t_EI = "\e[2 q"                    " Block mode in everything else
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it (nvim issue 6005)
-set guicursor=
+"set guicursor=
 
 " ---------- REMAPED KEYS --------
 
