@@ -48,8 +48,14 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it (n
 
 " ---------- REMAPED KEYS --------
 
+" Remove yanking when deleting
 nnoremap d "_d
 vnoremap d "_d
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " ---------- TERMINAL MODE --------
 
@@ -147,5 +153,6 @@ Plug 'ollykel/v-vim'
 Plug 'junegunn/goyo.vim'
 "Plug 'Yggdroot/indentLine'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
