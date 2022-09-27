@@ -154,5 +154,6 @@ Plug 'junegunn/goyo.vim'
 "Plug 'Yggdroot/indentLine'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'junegunn/vim-easy-align'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
