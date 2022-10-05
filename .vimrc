@@ -14,6 +14,10 @@ colors molokai
 let g:indentLine_char = '│'     " You might wanna use '¦' if there are spaces between lines
 let g:indent_blankline_show_trailing_blankline_indent = v:false     " See lukas-reineke/indent-blankline.nvim#469
 
+" ---------- CLIPBOARD ----------
+
+set clipboard=unnamedplus
+
 " ---------- CASE ----------
 
 set ignorecase
