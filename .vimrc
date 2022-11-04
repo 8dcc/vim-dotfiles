@@ -66,6 +66,9 @@ nmap ga <Plug>(EasyAlign)
 " For exiting terminal mode with esc only
 :tnoremap <Esc> <C-\><C-n>
 
+" Remove line numbers when we open a terminal
+autocmd TermOpen * setlocal nonumber norelativenumber
+
 " ---------- STATUS LINE ----------
 
 set statusline=
