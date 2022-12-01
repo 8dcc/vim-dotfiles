@@ -10,10 +10,6 @@ set termguicolors
 set number relativenumber
 colors molokai
 
-"set cursorline
-let g:indentLine_char = '│'     " You might wanna use '¦' if there are spaces between lines
-let g:indent_blankline_show_trailing_blankline_indent = v:false     " See lukas-reineke/indent-blankline.nvim#469
-
 " ---------- CLIPBOARD ----------
 
 set clipboard=unnamedplus
@@ -52,7 +48,14 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it (n
 
 " ---------- PLUGIN SETTINGS --------
 
+" r4v10l1/vim-fourmolu
+let g:fourmolu_executable = "fourmolu"
 let g:fourmolu_write = 0
+command HaskellFmt FourmoluFmt          " Unfortunately custom commands must start with an uppercase letter
+
+" lukas-reineke/indent-blankline.nvim
+let g:indentLine_char = '│'     " You might wanna use '¦' if there are spaces between lines
+let g:indent_blankline_show_trailing_blankline_indent = v:false     " See lukas-reineke/indent-blankline.nvim#469
 
 " ---------- REMAPED KEYS --------
 
