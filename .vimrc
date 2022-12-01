@@ -50,6 +50,10 @@ let &t_EI = "\e[2 q"                    " Block mode in everything else
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it (nvim issue 6005)
 "set guicursor=
 
+" ---------- PLUGIN SETTINGS --------
+
+let g:fourmolu_write = 0
+
 " ---------- REMAPED KEYS --------
 
 " Remove yanking when deleting
@@ -162,5 +166,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'junegunn/vim-easy-align'
 Plug 'rhysd/vim-clang-format'
+Plug 'r4v10l1/vim-fourmolu'
 
 call plug#end()
