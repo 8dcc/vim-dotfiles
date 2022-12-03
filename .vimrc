@@ -10,6 +10,8 @@ set termguicolors
 set number relativenumber
 colors molokai
 
+set colorcolumn=85  " Char limit for writing code
+
 " ---------- CLIPBOARD ----------
 
 set clipboard=unnamedplus
