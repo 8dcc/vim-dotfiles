@@ -1,5 +1,4 @@
 " https://github.com/r4v10l1/vim-dotfiles
-" I swear to god if that zesty ass bitch tries to copy my shit I will go crazy
 
 " ---------- COLORS AND STYLE --------
 
@@ -15,6 +14,16 @@ set colorcolumn=85  " Char limit for writing code
 " ---------- CLIPBOARD ----------
 
 set clipboard=unnamedplus
+
+" ---------- UNDO ----------
+
+set undofile
+
+if !isdirectory($HOME."/.vim/undo")
+    call mkdir($HOME."/.vim/undo", "p")
+endif
+
+set undodir=~/.vim/undo
 
 " ---------- CASE ----------
 
@@ -174,3 +183,4 @@ Plug 'rhysd/vim-clang-format'
 Plug 'r4v10l1/vim-fourmolu'
 
 call plug#end()
+
