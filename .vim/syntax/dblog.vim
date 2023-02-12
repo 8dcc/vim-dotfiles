@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language: Discord bot logs
-" Maintainer: https://github.com/r4v10l1
+" Maintainer: https://github.com/8dcc
 " Latest Revision: 16 April 2022
 
 if exists("b:current_syntax")

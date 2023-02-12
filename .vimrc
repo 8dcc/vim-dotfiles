@@ -1,4 +1,4 @@
-" https://github.com/r4v10l1/vim-dotfiles
+" https://github.com/8dcc/vim-dotfiles
 
 " ---------- COLORS AND STYLE --------
 
@@ -59,7 +59,7 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it (n
 
 " ---------- PLUGIN SETTINGS --------
 
-" r4v10l1/vim-fourmolu
+" 8dcc/vim-fourmolu
 let g:fourmolu_executable = "fourmolu"
 let g:fourmolu_write = 0
 command HaskellFmt FourmoluFmt          " Unfortunately custom commands must start with an uppercase letter
@@ -180,7 +180,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'junegunn/vim-easy-align'
 Plug 'rhysd/vim-clang-format'
-Plug 'r4v10l1/vim-fourmolu'
+Plug '8dcc/vim-fourmolu'
 
 call plug#end()
 
