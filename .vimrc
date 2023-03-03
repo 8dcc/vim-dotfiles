@@ -13,7 +13,7 @@ set colorcolumn=85  " Char limit for writing code
 
 " ---------- CLIPBOARD ----------
 
-set clipboard=unnamedplus
+set clipboard=unnamedplus       " Use system clipboard. See :checkhealth
 
 " ---------- UNDO ----------
 
@@ -27,8 +27,8 @@ set undodir=~/.vim/undo
 
 " ---------- CASE ----------
 
-set ignorecase
-set smartcase
+set ignorecase      " Ignore lowercase or upercase when searching
+set smartcase       " Overwrite if we are searching with a uppercase
 
 " ---------- TABS AND SPLITS ----------
 
@@ -39,7 +39,8 @@ set expandtab       " This replaces tabs with spaces (in this case 4)
 " Removes 'r' and 'o' from formatoptions. Removes autocomments on newline
 autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 
-set splitbelow      " Make splits split to the right and below instead of up and left
+" Make splits split to the right and below instead of up and left
+set splitbelow
 set splitright
 
 " ---------- FOLDING ----------
@@ -54,21 +55,34 @@ set nofoldenable            " Disable folding by default when opening a buffer
 set mouse=a                             " Enable mouse
 let &t_SI = "\e[6 q"                    " Line mode in insert mode
 let &t_EI = "\e[2 q"                    " Block mode in everything else
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it (nvim issue 6005)
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it (nvim
+                                        " issue 6005)
 "set guicursor=
 
 " ---------- PLUGIN SETTINGS --------
 
-" 8dcc/vim-fourmolu
+" [8dcc/vim-fourmolu]
 let g:fourmolu_executable = "fourmolu"
 let g:fourmolu_write = 0
-command HaskellFmt FourmoluFmt          " Unfortunately custom commands must start with an uppercase letter
 
-" lukas-reineke/indent-blankline.nvim
-let g:indentLine_char = '│'     " You might wanna use '¦' if there are spaces between lines
-let g:indent_blankline_show_trailing_blankline_indent = v:false     " See lukas-reineke/indent-blankline.nvim#469
+" Unfortunately custom commands must start with an uppercase letter
+command HaskellFmt FourmoluFmt
 
-" ---------- REMAPED KEYS --------
+" [lukas-reineke/indent-blankline.nvim]
+" You might wanna use '¦' (instead of '│') if there are spaces between lines.
+let g:indentLine_char = '│'
+
+" See lukas-reineke/indent-blankline.nvim#469
+let g:indent_blankline_show_trailing_blankline_indent = v:false
+
+" ---------- FORMATTING ----------
+
+" Use clang-format for formatting when using 'gq'. The program needs to read
+" from stdin and write to stdout. See: 
+"   https://github.com/rhysd/vim-clang-format/issues/125
+set formatprg=clang-format
+
+" ---------- REMAPED KEYS ----------
 
 " Remove yanking when deleting
 nnoremap d "_d
@@ -91,10 +105,10 @@ autocmd TermOpen * setlocal nonumber norelativenumber
 
 set statusline=
 set statusline+=\ %F\ %M\ %R
-set statusline+=%=									" From here justify to the right
-" set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
-" set statusline+=\ ascii:\ \%b\ \|\ row:\ %2l\ col:\ %2c\ percent:\ %3p%%
-set statusline+=\ %Y\ \|\ ascii:\ \%3b\ \|\ row:\ %2l\ col:\ %2c\ \|\ %3p%%		" Moved the file file type to the righ
+set statusline+=%=					" From here justify to the right
+
+" Moved the file file type to the righ
+set statusline+=\ %Y\ \|\ ascii:\ \%3b\ \|\ row:\ %2l\ col:\ %2c\ \|\ %3p%%
 
 set laststatus=2
 
@@ -108,6 +122,7 @@ set wildmenu
 if has('gui')
     set guioptions-=e
 endif
+
 if exists("+showtabline")
     function MyTabLine()
         let s = ''
@@ -129,6 +144,7 @@ if exists("+showtabline")
             let bufnr = buflist[winnr - 1]
             let file = bufname(bufnr)
             let buftype = getbufvar(bufnr, 'buftype')
+
             if buftype == 'nofile'
                 if file =~ '\/.'
                     let file = substitute(file, '.*\/\ze.', '', '')
@@ -136,17 +152,21 @@ if exists("+showtabline")
             else
                 let file = fnamemodify(file, ':p:t')
             endif
+
             if file == ''
                 " let file = '[No Name]'
                 let file = 'Unnamed'
             endif
+
             let s .= file.(getbufvar(buflist[winnr - 1], "&mod")?'+':'').' '
             let i = i + 1
         endwhile
+
         let s .= '%T%#TabLineFill#%='
         "let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
         return s
     endfunction
+
     set stal=2
     set tabline=%!MyTabLine()
     highlight link TabNum Special
