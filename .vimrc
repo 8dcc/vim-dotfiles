@@ -9,7 +9,7 @@ set termguicolors
 set number relativenumber
 colors molokai
 
-set colorcolumn=85  " Char limit for writing code
+set colorcolumn=80  " Char limit for writing code
 
 " ---------- CLIPBOARD ----------
 
@@ -55,8 +55,8 @@ set nofoldenable            " Disable folding by default when opening a buffer
 set mouse=a                             " Enable mouse
 let &t_SI = "\e[6 q"                    " Line mode in insert mode
 let &t_EI = "\e[2 q"                    " Block mode in everything else
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it (nvim
-                                        " issue 6005)
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it
+                                        " (nvim issue 6005)
 "set guicursor=
 
 " ---------- PLUGIN SETTINGS --------
