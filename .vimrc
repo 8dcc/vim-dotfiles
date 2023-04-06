@@ -101,6 +101,9 @@ nmap ga <Plug>(EasyAlign)
 " Remove line numbers when we open a terminal
 autocmd TermOpen * setlocal nonumber norelativenumber
 
+" For windows, use cmd terminal with cmder shell
+"set shell=cmd.exe\ /K\ D:\\\\Programs\\\\cmder\\\\vendor\\\\init.bat
+
 " ---------- STATUS LINE ----------
 
 set statusline=
