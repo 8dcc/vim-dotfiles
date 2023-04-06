@@ -204,6 +204,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'junegunn/vim-easy-align'
 Plug 'rhysd/vim-clang-format'
 Plug '8dcc/vim-fourmolu'
+Plug 'farmergreg/vim-lastplace'
 
 call plug#end()
 
