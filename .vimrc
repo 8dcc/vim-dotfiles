@@ -4,10 +4,12 @@
 
 " set t_Co=256
 "language en_US
-syntax on
 set termguicolors
 set number relativenumber
 colors molokai
+
+syntax on
+let g:load_doxygen_syntax=1     " Enable doxygen syntax
 
 set colorcolumn=80  " Char limit for writing code
 
