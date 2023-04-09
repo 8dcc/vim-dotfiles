@@ -39,7 +39,7 @@ set shiftwidth=4
 set expandtab       " This replaces tabs with spaces (in this case 4)
 
 " Removes 'r' and 'o' from formatoptions. Removes autocomments on newline
-autocmd FileType * setlocal formatoptions-=r formatoptions-=o
+"autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 
 " Make splits split to the right and below instead of up and left
 set splitbelow
