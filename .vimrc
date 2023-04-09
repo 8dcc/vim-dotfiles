@@ -207,6 +207,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'rhysd/vim-clang-format'
 Plug '8dcc/vim-fourmolu'
 Plug 'farmergreg/vim-lastplace'
+Plug 'vim-scripts/DoxygenToolkit.vim'
 
 call plug#end()
 
