@@ -208,6 +208,7 @@ Plug 'rhysd/vim-clang-format'
 Plug '8dcc/vim-fourmolu'
 Plug 'farmergreg/vim-lastplace'
 Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'axvr/org.vim'
 
 call plug#end()
 
