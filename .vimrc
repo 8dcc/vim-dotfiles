@@ -11,7 +11,7 @@ colors molokai
 syntax on
 let g:load_doxygen_syntax=1     " Enable doxygen syntax
 
-set colorcolumn=80  " Char limit for writing code
+set colorcolumn=81  " Char limit for writing code. 81 so 80 is outside of it
 
 " ---------- CLIPBOARD ----------
 
