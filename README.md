@@ -1,9 +1,10 @@
-# Vim and nvim dotfiles
+# Neovim dotfiles
 **My vim/nvim dotfiles.**
 
 ## Installation
-Copy the `.vim` folder and the `.vimrc` file to the user folder (`~`).  
-Copy the `init.vim` file to `~/.config/nvim/init.vim`
+- Copy the `vim` folder to `~/.vim`
+- Copy the `vimrc` file to `~/.vimrc`.  
+- Copy the `init.vim` file to `~/.config/nvim/init.vim`
 
 ## Screenshots
 *Note: Some screenshots might be a bit outdated.*
