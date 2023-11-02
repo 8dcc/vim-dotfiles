@@ -55,12 +55,13 @@ hi Identifier      guifg=#FD971F
 hi Ignore          guifg=#808080 guibg=bg
 hi IncSearch       guifg=#C4BE89 guibg=#000000
 
+" TODO: Change color of labels to #AE81FF (but not `case X:` or `default:`)
 hi Keyword         guifg=#F92672               gui=bold
 hi Label           guifg=#E6DB74               gui=none
-hi Macro           guifg=#C4BE89               gui=italic
+hi Macro           guifg=#C4BE89               gui=none
 hi SpecialKey      guifg=#66D9EF               gui=italic
 
-hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
+hi MatchParen      guifg=#FFFFFF guibg=bg      gui=bold
 hi ModeMsg         guifg=#E6DB74
 hi MoreMsg         guifg=#E6DB74
 hi Operator        guifg=#F92672
@@ -90,7 +91,7 @@ endif
 hi Statement       guifg=#F92672               gui=bold
 hi StatusLine      guifg=#455354 guibg=fg
 hi StatusLineNC    guifg=#808080 guibg=#080808
-hi StorageClass    guifg=#FD971F               gui=italic
+hi StorageClass    guifg=#FD971F               gui=none
 hi Structure       guifg=#66D9EF
 hi Tag             guifg=#F92672               gui=italic
 hi Title           guifg=#ef5939
