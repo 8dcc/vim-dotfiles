@@ -1,12 +1,15 @@
 
-" -------------------------
-" Highlight DELME keywords
-" -------------------------
+"---------------------------------------------------
+" Highlight NOTE and DELME keywords inside comments
+"---------------------------------------------------
 
-" Create keyword called myDelme with "DELME" and "delme", they will only highlight if
-" contained in another group.
-syn keyword myDelme DELME delme contained
-" Add myDelme to the cCommentGroup cluster (in a c file: ":syn list", G)
-syn cluster cCommentGroup add=myDelme
-" Link myDelme to the Todo highlight format
-hi link myDelme Todo
+" Create keyword called myExtraCommentKeywords with 'NOTE', 'DELME' and 'delme',
+" they will only highlight if contained in another group.
+syn keyword myExtraCommentKeywords NOTE DELME delme contained
+
+" Add myExtraCommentKeywords to the cCommentGroup cluster.
+" From a c file, see: `:syn list`, G
+syn cluster cCommentGroup add=myExtraCommentKeywords
+
+" Link myExtraCommentKeywords to the Todo highlight format
+hi link myExtraCommentKeywords Todo
