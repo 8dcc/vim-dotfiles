@@ -72,6 +72,18 @@ set formatprg=clang-format
 nnoremap d "_d
 vnoremap d "_d
 
+" Move lines with Alt+<Dir>
+nnoremap <A-Down> :m .+1<CR>
+nnoremap <A-Up> :m .-2<CR>
+vnoremap <A-Down> :m '>+1<CR>gv
+vnoremap <A-Up> :m '<-2<CR>gv
+
+" These won't work with my DWM build
+nnoremap <A-j> :m .+1<CR>
+nnoremap <A-k> :m .-2<CR>
+vnoremap <A-j> :m '>+1<CR>gv
+vnoremap <A-k> :m '<-2<CR>gv
+
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
