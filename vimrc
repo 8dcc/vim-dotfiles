@@ -1,8 +1,8 @@
 " https://github.com/8dcc/vim-dotfiles
 
-" ---------- COLORS AND STYLE --------
+"--- COLORS AND STYLE --------------------------------------------------------
 
-" set t_Co=256
+"set t_Co=256
 "language en_US
 set termguicolors
 set number relativenumber
@@ -13,11 +13,11 @@ let g:load_doxygen_syntax=1     " Enable doxygen syntax
 
 set colorcolumn=81  " Char limit for writing code. 81 so 80 is outside of it
 
-" ---------- CLIPBOARD ----------
+"--- CLIPBOARD ---------------------------------------------------------------
 
 set clipboard=unnamedplus       " Use system clipboard. See :checkhealth
 
-" ---------- UNDO ----------
+"--- UNDO --------------------------------------------------------------------
 
 set undofile
 
@@ -27,64 +27,46 @@ endif
 
 set undodir=~/.vim/undo
 
-" ---------- CASE ----------
+"--- CASE --------------------------------------------------------------------
 
 set ignorecase      " Ignore lowercase or upercase when searching
 set smartcase       " Overwrite if we are searching with a uppercase
 
-" ---------- TABS AND SPLITS ----------
+"--- TABS AND SPLITS ---------------------------------------------------------
 
+" Replace tabs with spaces (in this case 4)
 set tabstop=4
 set shiftwidth=4
-set expandtab       " This replaces tabs with spaces (in this case 4)
+set expandtab
 
-" Removes 'r' and 'o' from formatoptions. Removes autocomments on newline
+" Remove 'r' and 'o' from formatoptions for removing autocomments on newline
 "autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 
 " Make splits split to the right and below instead of up and left
 set splitbelow
 set splitright
 
-" ---------- FOLDING ----------
+"--- FOLDING -----------------------------------------------------------------
 
 set foldmethod=syntax       " Syntax folding method
 set foldcolumn=0            " No column by default
 set foldlevel=999           " Start with everything unfolded
 set nofoldenable            " Disable folding by default when opening a buffer
 
-" ---------- CURSORS --------
+"--- CURSORS -----------------------------------------------------------------
 
 set mouse=a                             " Enable mouse
 let &t_SI = "\e[6 q"                    " Line mode in insert mode
 let &t_EI = "\e[2 q"                    " Block mode in everything else
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0   " Had some problems and this fixed it
-                                        " (nvim issue 6005)
-"set guicursor=
 
-" ---------- PLUGIN SETTINGS --------
-
-" [8dcc/vim-fourmolu]
-let g:fourmolu_executable = "fourmolu"
-let g:fourmolu_write = 0
-
-" Unfortunately custom commands must start with an uppercase letter
-command HaskellFmt FourmoluFmt
-
-" [lukas-reineke/indent-blankline.nvim]
-" You might wanna use '¦' (instead of '│') if there are spaces between lines.
-let g:indentLine_char = '│'
-
-" See lukas-reineke/indent-blankline.nvim#469
-let g:indent_blankline_show_trailing_blankline_indent = v:false
-
-" ---------- FORMATTING ----------
+"--- FORMATTING --------------------------------------------------------------
 
 " Use clang-format for formatting when using 'gq'. The program needs to read
 " from stdin and write to stdout. See: 
 "   https://github.com/rhysd/vim-clang-format/issues/125
 set formatprg=clang-format
 
-" ---------- REMAPED KEYS ----------
+"--- REMAPED KEYS ------------------------------------------------------------
 
 " Remove yanking when deleting
 nnoremap d "_d
@@ -95,34 +77,32 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" ---------- TERMINAL MODE --------
+"--- TERMINAL MODE -----------------------------------------------------------
 
-" For exiting terminal mode with esc only
+" Exit terminal mode with esc only
 :tnoremap <Esc> <C-\><C-n>
 
 " Remove line numbers when we open a terminal
 autocmd TermOpen * setlocal nonumber norelativenumber
 
-" For windows, use cmd terminal with cmder shell
-"set shell=cmd.exe\ /K\ D:\\\\Programs\\\\cmder\\\\vendor\\\\init.bat
-
-" ---------- STATUS LINE ----------
+"--- STATUS LINE -------------------------------------------------------------
 
 set statusline=
 set statusline+=\ %F\ %M\ %R
-set statusline+=%=					" From here justify to the right
 
-" Moved the file file type to the righ
+" From here justify to the right
+set statusline+=%=
+
+" Moved the file file type to the right
 set statusline+=\ %Y\ \|\ ascii:\ \%3b\ \|\ row:\ %2l\ col:\ %2c\ \|\ %3p%%
-
 set laststatus=2
 
-" ---------- TAB FILE COMPLETION ---------
+"--- TAB FILE COMPLETION -----------------------------------------------------
 
 set wildmode=longest,list,full
 set wildmenu
 
-" --------- FILENAMES (TABLINE) ----------
+"--- FILENAMES (TABLINE) -----------------------------------------------------
 
 if has('gui')
     set guioptions-=e
@@ -184,7 +164,23 @@ endif
 set hidden
 set guitablabel=\[%N\]\ %t\ %M
 
-" --------- PLUGINS ---------
+"--- PLUGIN SETTINGS ---------------------------------------------------------
+
+" [8dcc/vim-fourmolu]
+let g:fourmolu_executable = "fourmolu"
+let g:fourmolu_write = 0
+
+" Unfortunately custom commands must start with an uppercase letter
+command HaskellFmt FourmoluFmt
+
+" [lukas-reineke/indent-blankline.nvim]
+" You might wanna use '¦' (instead of '│') if there are spaces between lines.
+let g:indentLine_char = '│'
+
+" See lukas-reineke/indent-blankline.nvim#469
+let g:indent_blankline_show_trailing_blankline_indent = v:false
+
+" --- PLUGINS ----------------------------------------------------------------
 
 " Install and run vim-plug on first run
 if empty(glob('~/.vim/autoload/plug.vim'))
