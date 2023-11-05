@@ -78,7 +78,7 @@ nnoremap <A-Up> :m .-2<CR>
 vnoremap <A-Down> :m '>+1<CR>gv
 vnoremap <A-Up> :m '<-2<CR>gv
 
-" These won't work with my DWM build
+" These are masked in DWM by default, but work with my build
 nnoremap <A-j> :m .+1<CR>
 nnoremap <A-k> :m .-2<CR>
 vnoremap <A-j> :m '>+1<CR>gv
