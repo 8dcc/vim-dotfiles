@@ -12,6 +12,7 @@ syntax on
 let g:load_doxygen_syntax=1     " Enable doxygen syntax
 
 set colorcolumn=81  " Char limit for writing code. 81 so 80 is outside of it
+set nowrap
 
 "--- CLIPBOARD ---------------------------------------------------------------
 
