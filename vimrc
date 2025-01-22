@@ -218,6 +218,7 @@ Plug '8dcc/vim-fourmolu'
 Plug 'farmergreg/vim-lastplace'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'axvr/org.vim'
+Plug 'jamessan/vim-gnupg'
 
 call plug#end()
 
