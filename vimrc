@@ -63,7 +63,7 @@ let &t_EI = "\e[2 q"                    " Block mode in everything else
 "--- FORMATTING --------------------------------------------------------------
 
 " Use clang-format for formatting when using 'gq'. The program needs to read
-" from stdin and write to stdout. See: 
+" from stdin and write to stdout. See:
 "   https://github.com/rhysd/vim-clang-format/issues/125
 set formatprg=clang-format
 
@@ -211,7 +211,7 @@ Plug 'tpope/vim-commentary'
 Plug 'ollykel/v-vim'
 Plug 'junegunn/goyo.vim'
 "Plug 'Yggdroot/indentLine'
-Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim', { 'tag': 'v3.8.5' }
 Plug 'junegunn/vim-easy-align'
 Plug 'rhysd/vim-clang-format'
 Plug '8dcc/vim-fourmolu'
