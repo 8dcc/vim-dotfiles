@@ -47,6 +47,9 @@ set expandtab
 set splitbelow
 set splitright
 
+" TODO: Explain
+set hidden
+
 "--- FOLDING -----------------------------------------------------------------
 
 set foldmethod=syntax       " Syntax folding method
@@ -174,7 +177,6 @@ if exists("+showtabline")
     imap   <C-S-Tab>  <C-O>:tabprev<CR>
 endif
 
-set hidden
 set guitablabel=\[%N\]\ %t\ %M
 
 "--- PLUGIN SETTINGS ---------------------------------------------------------
