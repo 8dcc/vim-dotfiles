@@ -99,7 +99,9 @@ nmap ga <Plug>(EasyAlign)
 :tnoremap <Esc> <C-\><C-n>
 
 " Remove line numbers when we open a terminal
-autocmd TermOpen * setlocal nonumber norelativenumber
+if has('nvim')
+    autocmd TermOpen * setlocal nonumber norelativenumber
+endif
 
 "--- STATUS LINE -------------------------------------------------------------
 
@@ -122,6 +124,7 @@ set wildmenu
 
 if has('gui')
     set guioptions-=e
+    set guitablabel=\[%N\]\ %t\ %M
 endif
 
 if exists("+showtabline")
@@ -176,8 +179,6 @@ if exists("+showtabline")
     map    <C-S-Tab>  :tabprev<CR>
     imap   <C-S-Tab>  <C-O>:tabprev<CR>
 endif
-
-set guitablabel=\[%N\]\ %t\ %M
 
 "--- PLUGIN SETTINGS ---------------------------------------------------------
 
