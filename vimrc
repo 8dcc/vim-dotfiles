@@ -158,11 +158,10 @@ if exists("+showtabline")
             endif
 
             if file == ''
-                " let file = '[No Name]'
                 let file = 'Unnamed'
             endif
 
-            let s .= file.(getbufvar(buflist[winnr - 1], "&mod")?'+':'').' '
+            let s .= file.(getbufvar(buflist[winnr - 1], "&mod") ? '+' : '').' '
             let i = i + 1
         endwhile
 
@@ -171,9 +170,16 @@ if exists("+showtabline")
         return s
     endfunction
 
-    set stal=2
+    " Only show tabs when there are 2 or more open.
+    set stal=1
+
+    " TODO: The color of the current tab is not being set. Perhaps related
+    " to 'TabLineSel' above.
     set tabline=%!MyTabLine()
+
     highlight link TabNum Special
+
+    " Tab keybinds
     map    <C-Tab>    :tabnext<CR>
     imap   <C-Tab>    <C-O>:tabnext<CR>
     map    <C-S-Tab>  :tabprev<CR>
