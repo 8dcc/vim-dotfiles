@@ -5,8 +5,8 @@
 "set t_Co=256
 "language en_US
 set termguicolors
+colorscheme molokai-custom
 set number relativenumber
-colors molokai
 
 syntax on
 let g:load_doxygen_syntax=1     " Enable doxygen syntax
@@ -230,4 +230,3 @@ Plug 'axvr/org.vim'
 Plug 'jamessan/vim-gnupg'
 
 call plug#end()
-

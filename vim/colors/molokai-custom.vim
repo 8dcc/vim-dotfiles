@@ -1,12 +1,10 @@
-" Vim color file
+" Modified monokai theme for Vim
 "
-" Author: Tomas Restrepo <tomas@winterdom.com>
-" https://github.com/tomasr/molokai
+" Author: 8dcc
 "
-" Note: Based on the Monokai theme for TextMate
-" by Wimer Hazenberg and its darker variant
-" by Hamish Stuart Macpherson
-"
+" Note: Based on the Monokai by Tomas Restrepo
+" and its theme for TextMate by Wimer Hazenberg
+" and its darker variant by Hamish Stuart Macpherson
 
 hi clear
 
@@ -89,7 +87,7 @@ if has("spell")
     hi SpellRare   guisp=#FFFFFF gui=undercurl
 endif
 hi Statement       guifg=#F92672               gui=bold
-hi StatusLine      guifg=#455354 guibg=fg
+hi StatusLine      guifg=#222222 guibg=#BBBBBB
 hi StatusLineNC    guifg=#808080 guibg=#080808
 hi StorageClass    guifg=#FD971F               gui=none
 hi Structure       guifg=#66D9EF
@@ -121,13 +119,13 @@ if s:molokai_original == 1
    hi NonText         guifg=#75715E
    hi SpecialKey      guifg=#75715E
 else
-   hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
-   hi Comment         guifg=#7E8E91
+   hi Normal          guifg=#F8F8F2 guibg=#050505
+   hi Comment         guifg=#5E6C6E
    hi CursorLine                    guibg=#293739
    hi CursorLineNr    guifg=#FD971F               gui=none
    hi CursorColumn                  guibg=#293739
-   hi ColorColumn                   guibg=#232526
-   hi LineNr          guifg=#465457 guibg=#232526
+   hi ColorColumn                   guibg=#0D0D0D
+   hi LineNr          guifg=#465457 guibg=#111111
    hi NonText         guifg=#465457
    hi SpecialKey      guifg=#465457
 end
